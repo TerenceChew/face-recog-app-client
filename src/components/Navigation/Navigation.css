@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-logo {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .logout-logo {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

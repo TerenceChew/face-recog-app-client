@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Concert+One&family=Rubik+Moonrocks&family=Saira+Condensed:wght@100;300&family=Teko:wght@300;700&display=swap');
+
+.app {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, rgb(157, 70, 255), rgb(255, 255, 255));
+  /* background-color: rgb(0, 0, 0); */
+  padding: 1.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.content {
+  min-height: 90vh;
+  margin-top: .7rem;
+  gap: 2rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .content {
+    margin-top: 2.25rem;
+  }
+}

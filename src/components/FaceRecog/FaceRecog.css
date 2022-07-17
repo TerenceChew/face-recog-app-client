@@ -1,0 +1,15 @@
+.face-recog {
+  width: 90vw;
+  max-width: 55rem;
+  position: relative;
+}
+
+.face-recog > img {
+  width: 100%;
+  height: auto;
+}
+
+.face-detection-box {
+  position: absolute;
+  border: .15rem solid red;
+}

@@ -1,0 +1,64 @@
+.link-form {
+  gap: .5rem;
+}
+
+.link-form > div > p {
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  line-height: 1.75rem;
+  letter-spacing: .12rem;
+  font-size: 1.15rem;
+  color: black;
+}
+
+.input-area {
+  width: 85vw;
+  max-width: 45rem;
+  height: 8.5rem;
+  gap: 1rem;
+  border-radius: .5rem;
+  background: url('/public/assets/cool-background.png') no-repeat center;
+  background-size: cover;
+}
+
+.input-area > input {
+  width: 70vw;
+  max-width: 24rem;
+  height: 2.1rem;
+  border: none;
+  border-radius: .35rem;
+  text-indent: 1rem;
+}
+
+.input-area > button {
+  width: 35vw;
+  max-width: 9rem;
+  height: 2.7rem;
+  border: none;
+  border-radius: .35rem;
+  font-family: 'Bungee', cursive;
+  background-color: black;
+  color: yellow;
+  cursor: pointer;
+}
+
+.input-area > button:active {
+  transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+  .link-form > div > p {
+    font-size: 1.5rem;
+    letter-spacing: .13rem;
+  }
+
+  .input-area {
+    height: 9.5rem;
+    flex-direction: row;
+    padding: 0 1.5rem;
+  }
+
+  .input-area > input {
+    margin-right: 1rem;
+  }
+}
