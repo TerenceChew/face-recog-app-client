@@ -49,7 +49,7 @@ export default function SignIn(props) {
     const inputsAreValid = !Object.keys(inputErrors).length;
 
     if (inputsAreValid) {
-      fetch('http://localhost:3000/signIn', {
+      fetch('https://fra-server.herokuapp.com/signIn', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

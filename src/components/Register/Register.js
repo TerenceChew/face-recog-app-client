@@ -56,7 +56,7 @@ export default function Register(props) {
     const inputsAreValid = !Object.keys(inputErrors).length;
 
     if (inputsAreValid) {
-      fetch('http://localhost:3000/register', {
+      fetch('https://fra-server.herokuapp.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

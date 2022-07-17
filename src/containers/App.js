@@ -60,7 +60,7 @@ export default function App() {
 
   async function updateRank() {
     try {
-      const imageSubmitResponse = await fetch('http://localhost:3000/imageSubmit', {
+      const imageSubmitResponse = await fetch('https://fra-server.herokuapp.com/imageSubmit', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -121,7 +121,7 @@ export default function App() {
 
   async function handleImageSubmit() {
     try {
-      const clarifaiApiResponse = await fetch('http://localhost:3000/clarifaiApi', {
+      const clarifaiApiResponse = await fetch('https://fra-server.herokuapp.com/clarifaiApi', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
