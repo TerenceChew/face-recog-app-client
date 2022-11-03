@@ -1,5 +1,7 @@
 # Face Recog App
-This app is built to practice the use of React [Live Demo](https://fra-client.herokuapp.com/) :point_left:
+This app is built to practice the use of React
+
+[Live Demo](https://fra-client.herokuapp.com/) :point_left:
 
 Usage:
   1. Load any image to detect the number of faces it contains
