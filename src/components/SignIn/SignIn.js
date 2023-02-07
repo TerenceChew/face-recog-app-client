@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { validate } from 'email-validator';
-import './SignIn.css';
+import React, { useState } from "react";
+import { validate } from "email-validator";
+import "./SignIn.css";
 
 export default function SignIn(props) {
-  const [ userData, setUserData ] = useState({
-    email: '',
-    password: ''
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
   });
-  const [ inputErrors, setInputErrors ] = useState({});
-  const [ signInError, setSignInError ] = useState('');
-   
+  const [inputErrors, setInputErrors] = useState({});
+  const [signInError, setSignInError] = useState("");
+
   const { changeRoute, loadUser } = props;
 
   function updateUserData(event) {
     const { name, value } = event.target;
 
-    setUserData(prevState => ({
+    setUserData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   }
 
@@ -26,13 +26,13 @@ export default function SignIn(props) {
     const inputErrors = {};
 
     if (!email) {
-      inputErrors.email = 'Email is required!';
+      inputErrors.email = "Email is required!";
     } else if (!validate(email)) {
-      inputErrors.email = 'Not a valid email format!';
+      inputErrors.email = "Not a valid email format!";
     }
 
     if (!password) {
-      inputErrors.password = 'Password is required!';
+      inputErrors.password = "Password is required!";
     }
 
     setInputErrors(inputErrors);
@@ -49,72 +49,74 @@ export default function SignIn(props) {
     const inputsAreValid = !Object.keys(inputErrors).length;
 
     if (inputsAreValid) {
-      fetch('https://fra-server.herokuapp.com/signIn', {
-        method: 'POST',
+      fetch("https://fra-server.onrender.com/signIn", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(userData),
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.id) {
-          changeRoute('home');
-          loadUser(data);
-          console.log('signIn log', data);
-        } else {
-          handleSignInError(data);
-        }
-      })
-      .catch(console.log)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.id) {
+            changeRoute("home");
+            loadUser(data);
+            console.log("signIn log", data);
+          } else {
+            handleSignInError(data);
+          }
+        })
+        .catch(console.log);
     } else {
-      handleSignInError('');
-      console.log('inputs not valid');
+      handleSignInError("");
+      console.log("inputs not valid");
     }
   }
 
   function handleEnterKeypress(event) {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSignIn();
     }
   }
 
   return (
-    <main className='signIn'>
+    <main className="signIn">
       <form>
-        <fieldset className='signIn-fieldset'>
-          <legend className='signIn-title'>
-            Sign  In
-          </legend>
-          <div className='signIn-inputs center f-column'>
-            <label htmlFor='email'>Email</label>
+        <fieldset className="signIn-fieldset">
+          <legend className="signIn-title">Sign In</legend>
+          <div className="signIn-inputs center f-column">
+            <label htmlFor="email">Email</label>
             <input
-              name='email'
-              id='email'
-              type='email'
+              name="email"
+              id="email"
+              type="email"
               value={userData.email}
               onChange={updateUserData}
               onKeyDown={handleEnterKeypress}
             />
-            {inputErrors.email && <p className='error-message'>{inputErrors.email}</p>}
-            <label htmlFor='password'>Password</label>
-            <input 
-              name='password'
-              id='password' 
-              type='password'
+            {inputErrors.email && (
+              <p className="error-message">{inputErrors.email}</p>
+            )}
+            <label htmlFor="password">Password</label>
+            <input
+              name="password"
+              id="password"
+              type="password"
               value={userData.password}
               onChange={updateUserData}
               onKeyDown={handleEnterKeypress}
             />
-            {inputErrors.password && <p className='error-message'>{inputErrors.password}</p>}
-            {signInError && <p className='error-message'>{signInError}</p>}
+            {inputErrors.password && (
+              <p className="error-message">{inputErrors.password}</p>
+            )}
+            {signInError && <p className="error-message">{signInError}</p>}
           </div>
-          <div className='signIn-buttons center f-column'>
+          <div className="signIn-buttons center f-column">
             <p onClick={handleSignIn}>Sign In</p>
-            <p onClick={() => changeRoute('register')}>Register</p>
+            <p onClick={() => changeRoute("register")}>Register</p>
           </div>
         </fieldset>
       </form>
     </main>
-  )
+  );
 }
