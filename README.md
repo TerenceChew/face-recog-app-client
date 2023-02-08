@@ -2,7 +2,7 @@
 
 This app is built to practice the use of React
 
-[Live Demo](https://fra-client.herokuapp.com/) :point_left:
+[Live Demo](https://terencechew.github.io/face-recog-app-client/) :point_left:
 
 ## Usage:
 
