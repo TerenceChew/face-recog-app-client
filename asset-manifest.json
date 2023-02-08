@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/face-recog-app-client/static/css/main.07d8bb15.css",
+    "main.js": "/face-recog-app-client/static/js/main.56bb7b6f.js",
+    "static/js/787.331bcde1.chunk.js": "/face-recog-app-client/static/js/787.331bcde1.chunk.js",
+    "static/media/cool-background.png": "/face-recog-app-client/static/media/cool-background.668320f894b8d009fed9.png",
+    "index.html": "/face-recog-app-client/index.html",
+    "main.07d8bb15.css.map": "/face-recog-app-client/static/css/main.07d8bb15.css.map",
+    "main.56bb7b6f.js.map": "/face-recog-app-client/static/js/main.56bb7b6f.js.map",
+    "787.331bcde1.chunk.js.map": "/face-recog-app-client/static/js/787.331bcde1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07d8bb15.css",
+    "static/js/main.56bb7b6f.js"
+  ]
+}
