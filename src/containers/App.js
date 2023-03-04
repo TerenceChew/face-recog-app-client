@@ -38,7 +38,7 @@ export default function App() {
   );
   const [user, setUser] = useState(initialUser);
 
-  console.log("App user log", user);
+  // console.log("App user log", user);
 
   function loadUser(user) {
     setUser(user);

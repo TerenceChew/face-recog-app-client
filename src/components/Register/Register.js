@@ -68,7 +68,7 @@ export default function Register(props) {
           if (data.id) {
             changeRoute("home");
             addUser(data);
-            console.log("register log", data);
+            // console.log("register log", data);
           } else {
             handleRegisterError(data);
           }
@@ -76,7 +76,7 @@ export default function Register(props) {
         .catch(console.log);
     } else {
       handleRegisterError("");
-      console.log("inputs not valid");
+      // console.log("inputs not valid");
     }
   }
 

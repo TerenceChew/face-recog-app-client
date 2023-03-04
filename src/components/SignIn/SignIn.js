@@ -61,7 +61,7 @@ export default function SignIn(props) {
           if (data.id) {
             changeRoute("home");
             loadUser(data);
-            console.log("signIn log", data);
+            // console.log("signIn log", data);
           } else {
             handleSignInError(data);
           }
@@ -69,7 +69,7 @@ export default function SignIn(props) {
         .catch(console.log);
     } else {
       handleSignInError("");
-      console.log("inputs not valid");
+      // console.log("inputs not valid");
     }
   }
 
